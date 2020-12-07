@@ -10,6 +10,8 @@ spring:
     password: user
     url: jdbc:h2:mem:pokemon_db;
     driver-class-name: org.h2.Driver
+  profiles:
+   active: "prod"
 
 server:
   error:

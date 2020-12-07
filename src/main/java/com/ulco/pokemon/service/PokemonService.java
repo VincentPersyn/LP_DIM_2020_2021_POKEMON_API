@@ -8,9 +8,11 @@ import com.ulco.pokemon.enums.PokemonTypeEnum;
 import com.ulco.pokemon.exception.AlreadyExistException;
 import com.ulco.pokemon.exception.NotFoundException;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
-@Service
+@Profile("local")
+@Service("pokemonServiceUsingList")
 public class PokemonService implements IPokemonService {
 
   private final List<PokemonDTO> pokemonList;
